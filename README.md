@@ -65,3 +65,180 @@ surface-dark: #1B2727     // Card backgrounds
 text-primary: #FFFFFF     // White text
 text-secondary: #9CBABA   // Light gray text
 border-dark: #3B5454      // Border colors
+
+
+Project Structure
+lib/
+├── main.dart                 # Application entry point
+├── models/                   # Data models
+│   ├── product.dart         # Product data structure
+│   └── app_order.dart       # Order management
+├── providers/               # State management
+│   ├── cart_provider.dart   # Shopping cart state
+│   └── user_provider.dart   # User authentication state
+├── screens/                 # UI screens
+│   ├── splash_screen.dart   # App loading screen
+│   ├── onboarding_screen.dart # User onboarding
+│   ├── login_screen.dart    # Authentication
+│   ├── home_screen.dart     # Main product listing
+│   ├── product_detail_screen.dart # Product details
+│   ├── cart_screen.dart     # Shopping cart
+│   ├── checkout_screen.dart # Order checkout
+│   ├── order_confirmation_screen.dart # Order success
+│   └── profile_screen.dart  # User profile
+└── services/               # Business logic
+    ├── mock_auth_service.dart    # Authentication service
+    └── mock_database_service.dart # Local data service
+
+    
+🚀 Getting Started
+Prerequisites
+Flutter SDK 3.0 or higher
+
+Dart SDK 2.19 or higher
+
+Android Studio / VS Code
+
+Android Emulator or Physical Device
+
+Installation
+Clone the repository
+
+bash
+git clone https://github.com/yourusername/shopease-flutter.git
+cd shopease-flutter
+Install dependencies
+
+bash
+flutter pub get
+Run the application
+
+bash
+flutter run
+Building for Release
+bash
+# Build APK
+flutter build apk --release
+
+# Build App Bundle
+flutter build appbundle --release
+
+# Build for iOS
+flutter build ios --release
+📱 Screen Details
+Splash Screen
+Brand logo and app name
+
+Loading indicator
+
+Automatic navigation to onboarding
+
+Onboarding Screens
+Three-step introduction to app features
+
+Beautiful image carousel
+
+Skip and Get Started options
+
+Login Screen
+Email and password authentication
+
+Google Sign-In integration
+
+Forgot password functionality
+
+Sign-up navigation
+
+Home Screen
+Product grid layout
+
+Search functionality
+
+Category filtering
+
+Add to cart actions
+
+Product Details
+High-quality product images
+
+Color and size selection
+
+Product description
+
+Add to cart with quantity
+
+Shopping Cart
+Cart item management
+
+Quantity controls
+
+Price calculations
+
+Proceed to checkout
+
+Checkout Screen
+Shipping address form
+
+Payment method selection
+
+Order summary
+
+Secure payment processing
+
+Order Confirmation
+Success feedback
+
+Order details
+
+Tracking information
+
+Continue shopping
+
+User Profile
+Personal information
+
+Order history
+
+Settings management
+
+Logout functionality
+
+🔄 State Management
+The app uses Provider for state management:
+
+CartProvider: Manages shopping cart items and totals
+
+UserProvider: Handles user authentication and profile data
+
+Product State: Manages product listings and details
+
+🎯 Future Enhancements
+Planned Features
+Backend integration with Firebase
+
+Real payment gateway integration
+
+Push notifications
+
+Wishlist functionality
+
+Product reviews and ratings
+
+Advanced search and filters
+
+Order tracking with maps
+
+Multi-language support
+
+Dark/Light theme toggle
+
+Technical Improvements
+Unit and widget testing
+
+CI/CD pipeline
+
+Performance optimization
+
+Code documentation
+
+Error tracking and analytics
