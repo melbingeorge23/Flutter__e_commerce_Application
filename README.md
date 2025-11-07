@@ -65,9 +65,10 @@ surface-dark: #1B2727     // Card backgrounds
 text-primary: #FFFFFF     // White text
 text-secondary: #9CBABA   // Light gray text
 border-dark: #3B5454      // Border colors
+```
 
+### 📁 Project Structure
 
-Project Structure
 lib/
 ├── main.dart                 # Application entry point
 ├── models/                   # Data models
@@ -90,155 +91,48 @@ lib/
     ├── mock_auth_service.dart    # Authentication service
     └── mock_database_service.dart # Local data service
 
-    
-🚀 Getting Started
-Prerequisites
-Flutter SDK 3.0 or higher
 
-Dart SDK 2.19 or higher
-
-Android Studio / VS Code
-
-Android Emulator or Physical Device
-
-Installation
-Clone the repository
-
-bash
-git clone https://github.com/yourusername/shopease-flutter.git
-cd shopease-flutter
-Install dependencies
-
-bash
-flutter pub get
-Run the application
-
-bash
-flutter run
-Building for Release
-bash
-# Build APK
-flutter build apk --release
-
-# Build App Bundle
-flutter build appbundle --release
-
-# Build for iOS
-flutter build ios --release
-📱 Screen Details
-Splash Screen
-Brand logo and app name
-
-Loading indicator
-
-Automatic navigation to onboarding
-
-Onboarding Screens
-Three-step introduction to app features
-
-Beautiful image carousel
-
-Skip and Get Started options
-
-Login Screen
-Email and password authentication
-
-Google Sign-In integration
-
-Forgot password functionality
-
-Sign-up navigation
-
-Home Screen
-Product grid layout
-
-Search functionality
-
-Category filtering
-
-Add to cart actions
-
-Product Details
-High-quality product images
-
-Color and size selection
-
-Product description
-
-Add to cart with quantity
-
-Shopping Cart
-Cart item management
-
-Quantity controls
-
-Price calculations
-
-Proceed to checkout
-
-Checkout Screen
-Shipping address form
-
-Payment method selection
-
-Order summary
-
-Secure payment processing
-
-Order Confirmation
-Success feedback
-
-Order details
-
-Tracking information
-
-Continue shopping
-
-User Profile
-Personal information
-
-Order history
-
-Settings management
-
-Logout functionality
-
-🔄 State Management
-The app uses Provider for state management:
-
-CartProvider: Manages shopping cart items and totals
-
-UserProvider: Handles user authentication and profile data
-
-Product State: Manages product listings and details
 
 🎯 Future Enhancements
 Planned Features
 Backend integration with Firebase
-
 Real payment gateway integration
-
 Push notifications
-
 Wishlist functionality
-
 Product reviews and ratings
-
 Advanced search and filters
-
 Order tracking with maps
-
 Multi-language support
-
 Dark/Light theme toggle
-
 Technical Improvements
 Unit and widget testing
-
 CI/CD pipeline
-
 Performance optimization
-
 Code documentation
-
 Error tracking and analytics
+
+🙏 Acknowledgments
+Design inspiration from modern e-commerce apps
+
+Flutter community for excellent packages and support
+
+Unsplash for high-quality product images
+
+Material Design for UI components and guidelines
+
+📞 Support
+If you have any questions or need help with the project, please:
+
+Open an issue on GitHub
+
+Contact the development team
+
+Check the documentation
+
+<div align="center">
+Built with ❤️ using Flutter
+
+https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white
+https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white
+
+</div> ```
