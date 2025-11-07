@@ -69,22 +69,22 @@ border-dark: #3B5454      // Border colors
 
 
 🎯 Future Enhancements
-Planned Features
-Backend integration with Firebase
-Real payment gateway integration
-Push notifications
-Wishlist functionality
-Product reviews and ratings
-Advanced search and filters
-Order tracking with maps
-Multi-language support
-Dark/Light theme toggle
-Technical Improvements
-Unit and widget testing
-CI/CD pipeline
-Performance optimization
-Code documentation
-Error tracking and analytics
+- Planned Features
+- Backend integration with Firebase
+- Real payment gateway integration
+- Push notifications
+- Wishlist functionality
+- Product reviews and ratings
+- Advanced search and filters
+- Order tracking with maps
+- Multi-language support
+- Dark/Light theme toggle
+- Technical Improvements
+- Unit and widget testing
+- CI/CD pipeline
+- Performance optimization
+- Code documentation
+- Error tracking and analytics
 
 🙏 Acknowledgments
 Design inspiration from modern e-commerce apps
