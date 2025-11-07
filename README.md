@@ -67,31 +67,6 @@ text-secondary: #9CBABA   // Light gray text
 border-dark: #3B5454      // Border colors
 ```
 
-### 📁 Project Structure
-
-lib/
-├── main.dart                 # Application entry point
-├── models/                   # Data models
-│   ├── product.dart         # Product data structure
-│   └── app_order.dart       # Order management
-├── providers/               # State management
-│   ├── cart_provider.dart   # Shopping cart state
-│   └── user_provider.dart   # User authentication state
-├── screens/                 # UI screens
-│   ├── splash_screen.dart   # App loading screen
-│   ├── onboarding_screen.dart # User onboarding
-│   ├── login_screen.dart    # Authentication
-│   ├── home_screen.dart     # Main product listing
-│   ├── product_detail_screen.dart # Product details
-│   ├── cart_screen.dart     # Shopping cart
-│   ├── checkout_screen.dart # Order checkout
-│   ├── order_confirmation_screen.dart # Order success
-│   └── profile_screen.dart  # User profile
-└── services/               # Business logic
-    ├── mock_auth_service.dart    # Authentication service
-    └── mock_database_service.dart # Local data service
-
-
 
 🎯 Future Enhancements
 Planned Features
