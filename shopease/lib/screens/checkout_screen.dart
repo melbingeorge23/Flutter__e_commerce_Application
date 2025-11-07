@@ -14,17 +14,14 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
   final List<PaymentMethod> _paymentMethods = [
     PaymentMethod(
       name: 'Credit / Debit Card',
-      icon: 'assets/images/stripe.png',
       isSelected: true,
     ),
     PaymentMethod(
       name: 'PayPal',
-      icon: 'assets/images/paypal.png',
       isSelected: false,
     ),
     PaymentMethod(
-      name: 'Razorpay',
-      icon: 'assets/images/razorpay.png',
+      name: 'Digital Wallet',
       isSelected: false,
     ),
   ];
@@ -36,8 +33,6 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
   final _postalCodeController = TextEditingController();
   final _countryController = TextEditingController();
 
-
-// In the _confirmOrder method, update the order creation:
   void _confirmOrder() {
     if (_formKey.currentState!.validate()) {
       // Create order object
@@ -266,45 +261,111 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
   }
 
   Widget _buildPaymentMethodCard(PaymentMethod method, int index) {
-    return Container(
-      margin: const EdgeInsets.only(bottom: 12),
-      padding: const EdgeInsets.all(16),
-      decoration: BoxDecoration(
-        color: _selectedPaymentMethod == index
-            ? const Color(0xFF0DF2F2).withOpacity(0.2)
-            : const Color(0xFF102222),
-        borderRadius: BorderRadius.circular(8),
-        border: Border.all(
+    return GestureDetector(
+      onTap: () {
+        setState(() {
+          _selectedPaymentMethod = index;
+        });
+      },
+      child: Container(
+        margin: const EdgeInsets.only(bottom: 12),
+        padding: const EdgeInsets.all(16),
+        decoration: BoxDecoration(
           color: _selectedPaymentMethod == index
-              ? const Color(0xFF0DF2F2)
-              : const Color(0xFF3B5454),
-        ),
-      ),
-      child: RadioListTile<int>(
-        value: index,
-        groupValue: _selectedPaymentMethod,
-        onChanged: (value) {
-          setState(() {
-            _selectedPaymentMethod = value!;
-          });
-        },
-        title: Text(
-          method.name,
-          style: const TextStyle(
-            color: Colors.white,
-            fontSize: 16,
-            fontWeight: FontWeight.w500,
+              ? const Color(0xFF0DF2F2).withOpacity(0.2)
+              : const Color(0xFF102222),
+          borderRadius: BorderRadius.circular(8),
+          border: Border.all(
+            color: _selectedPaymentMethod == index
+                ? const Color(0xFF0DF2F2)
+                : const Color(0xFF3B5454),
           ),
         ),
-        secondary: Image.asset(
-          method.icon,
-          height: 24,
+        child: Row(
+          children: [
+            // Payment Method Icon
+            Container(
+              width: 40,
+              height: 40,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(8),
+              ),
+              child: Center(
+                child: _getPaymentIcon(method.name),
+              ),
+            ),
+            const SizedBox(width: 16),
+            // Payment Method Name
+            Expanded(
+              child: Text(
+                method.name,
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 16,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+            ),
+            // Radio Button
+            Container(
+              width: 20,
+              height: 20,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                border: Border.all(
+                  color: _selectedPaymentMethod == index
+                      ? const Color(0xFF0DF2F2)
+                      : Colors.white54,
+                  width: 2,
+                ),
+              ),
+              child: _selectedPaymentMethod == index
+                  ? Container(
+                margin: const EdgeInsets.all(4),
+                decoration: const BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Color(0xFF0DF2F2),
+                ),
+              )
+                  : null,
+            ),
+          ],
         ),
-        activeColor: const Color(0xFF0DF2F2),
-        contentPadding: EdgeInsets.zero,
-        controlAffinity: ListTileControlAffinity.trailing,
       ),
     );
+  }
+
+  Widget _getPaymentIcon(String methodName) {
+    switch (methodName) {
+      case 'Credit / Debit Card':
+        return const Icon(
+          Icons.credit_card,
+          color: Colors.black,
+          size: 24,
+        );
+      case 'PayPal':
+        return const Text(
+          'PP',
+          style: TextStyle(
+            color: Colors.blue,
+            fontSize: 14,
+            fontWeight: FontWeight.bold,
+          ),
+        );
+      case 'Digital Wallet':
+        return const Icon(
+          Icons.wallet,
+          color: Colors.black,
+          size: 24,
+        );
+      default:
+        return const Icon(
+          Icons.payment,
+          color: Colors.black,
+          size: 24,
+        );
+    }
   }
 
   Widget _buildOrderSummary() {
@@ -363,12 +424,10 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
 
 class PaymentMethod {
   final String name;
-  final String icon;
   final bool isSelected;
 
   PaymentMethod({
     required this.name,
-    required this.icon,
     required this.isSelected,
   });
 }

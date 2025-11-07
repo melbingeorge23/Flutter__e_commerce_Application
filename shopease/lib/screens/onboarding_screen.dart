@@ -14,17 +14,17 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
   final List<OnboardingPage> _pages = [
     OnboardingPage(
-      image: 'assets/images/onboarding1.png',
+      image: 'https://images.unsplash.com/photo-1607082350899-7e105aa886ae?w=600&h=600&fit=crop',
       title: 'Unlock Exclusive Offers',
       description: 'Access member-only prices and daily deals.',
     ),
     OnboardingPage(
-      image: 'assets/images/onboarding2.png',
+      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=600&fit=crop',
       title: 'Swift & Simple Delivery',
       description: 'Enjoy the convenience of fast, free shipping on your orders.',
     ),
     OnboardingPage(
-      image: 'assets/images/onboarding3.png',
+      image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&h=600&fit=crop',
       title: 'Find Your Perfect Style',
       description: 'Get personalized recommendations and explore curated collections.',
     ),
@@ -156,15 +156,15 @@ class OnboardingPageWidget extends StatelessWidget {
           Expanded(
             child: Container(
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12),
-                image: const DecorationImage(
-                  image: NetworkImage('https://via.placeholder.com/300x300'),
+                borderRadius: BorderRadius.circular(16),
+                image: DecorationImage(
+                  image: NetworkImage(page.image),
                   fit: BoxFit.cover,
                 ),
               ),
             ),
           ),
-          const SizedBox(height: 24),
+          const SizedBox(height: 32),
           Text(
             page.title,
             style: const TextStyle(
@@ -174,14 +174,18 @@ class OnboardingPageWidget extends StatelessWidget {
             ),
             textAlign: TextAlign.center,
           ),
-          const SizedBox(height: 8),
-          Text(
-            page.description,
-            style: const TextStyle(
-              color: Colors.white70,
-              fontSize: 16,
+          const SizedBox(height: 12),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 24.0),
+            child: Text(
+              page.description,
+              style: const TextStyle(
+                color: Colors.white70,
+                fontSize: 16,
+                height: 1.5,
+              ),
+              textAlign: TextAlign.center,
             ),
-            textAlign: TextAlign.center,
           ),
         ],
       ),
