@@ -2,14 +2,6 @@
 
 A modern, beautiful, and fully functional e-commerce mobile application built with Flutter. ShopEase provides a seamless shopping experience with a stunning dark theme UI and smooth animations.
 
-![ShopEase Banner]
-<svg width="1200" height="400" xmlns="http://www.w3.org/2000/svg">
-  <rect width="100%" height="100%" fill="#102222"/>
-  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" 
-        fill="#0DF2F2" font-size="48" font-family="Arial, sans-serif" font-weight="bold">
-    🛍️ ShopEase E-Commerce App
-  </text>
-</svg>
 
 ## 📱 App Screenshots
 
