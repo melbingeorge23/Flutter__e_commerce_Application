@@ -4,13 +4,37 @@ A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Prerequisites
+- Flutter SDK 3.0 or higher
+- Dart SDK 2.19 or higher
+- Android Studio / VS Code
+- Android Emulator or Physical Device
 
-A few resources to get you started if this is your first Flutter project:
+## Installation
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Clone the repository
+```
+ git clone https://github.com/melbingeorge23/shopease-flutter.git
+cd shopease-flutter
+```
+- Install dependencies
+```
+flutter pub get
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Run the application
+```
+flutter run
+```
+
+- Building for Release
+```
+# Build APK
+flutter build apk --release
+
+# Build App Bundle
+flutter build appbundle --release
+
+# Build for iOS
+flutter build ios --release
+```
